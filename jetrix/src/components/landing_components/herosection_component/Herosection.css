@@ -1,0 +1,40 @@
+.Body-general{
+
+    max-width: 90%;
+    max-height: 90%;
+    display: flex;
+    flex-direction: row;
+    margin: 2% 5%;
+}
+
+.body-info{
+    margin: 0% 2%;
+    flex-grow: 1;
+    max-width: 50%;
+    text-align: justify;
+}
+
+.body-items{
+    flex-grow: 1;
+}
+
+
+.App-logo-hero {
+    height: 40vmin;
+    pointer-events: none;
+  }
+  
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo-hero {
+    animation: App-logo-spin-hero infinite 10s linear;
+  }
+}
+
+@keyframes App-logo-spin-hero {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
