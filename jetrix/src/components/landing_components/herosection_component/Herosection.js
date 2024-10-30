@@ -16,13 +16,13 @@ const HeroSections = () => {
                 <h1>Body</h1>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
             </div>
-            <Card className="body-items" sx={{backgroundColor:"#D6E6F2"}}>
-                <CardActionArea>
+            <Card elevation={15}>
+                <CardActionArea sx={{ backgroundColor: "#D6E6F2"}}  >
                     <CardMedia>
                         <img src={logo} className="App-logo-hero" alt="logo" />
                     </CardMedia>
                     <CardContent>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book
                     </CardContent>
                     <CardActions sx={{ justifyContent: "center" }}>
                         <Button variant="contained" sx={{ backgroundColor: "#436850" }} >Iniciar sesión</Button>
@@ -30,8 +30,6 @@ const HeroSections = () => {
                     </CardActions>
                 </CardActionArea>
             </Card>
-
-
         </div>
     );
 }
