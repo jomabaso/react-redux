@@ -1,0 +1,28 @@
+.mainLogin{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: rgb(255, 210, 210); */
+    min-height: 100vh;
+    padding: 0 10%;
+}
+
+.frameLogin{
+    display: flex;
+    flex-direction: column;
+    min-height: 50vh;
+    min-width: 50vh;
+    /* background-color: aqua; */
+    gap: 50px;
+}
+
+.inputLogin{
+
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    /* background-color: beige; */
+    text-align: center;
+}

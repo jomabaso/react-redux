@@ -1,0 +1,16 @@
+.mainSignup{
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 10% 0%;
+}
+
+.frameSignup{
+    display: flex;
+    justify-content: center;
+    min-height: 50vh;
+    min-width: 50vh;
+    height: 50%;
+    width: 50%;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}

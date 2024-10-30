@@ -8,8 +8,26 @@ import CardActions from '@mui/material/CardActions';
 import Button from '@mui/material/Button';
 
 import logo from '../../../logos/logo_s.svg';
+import login from "../../login_component/LoginPage";
+import signup from "../../signup_components/Signup";
+import { useNavigate } from "react-router-dom";
+
+// import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+// import LoginPage from '../../login_component/LoginPage';
+
+
 
 const HeroSections = () => {
+    const navigate = useNavigate();
+
+    const handleLoginNavigate = () =>{
+        navigate('/login')
+    };
+
+    const handleSignupNavigate = () =>{
+        navigate('/signup')
+    };
+
     return (
         <div className="Body-general">
             <div className="body-info">
@@ -25,8 +43,8 @@ const HeroSections = () => {
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book
                     </CardContent>
                     <CardActions sx={{ justifyContent: "center" }}>
-                        <Button variant="contained" sx={{ backgroundColor: "#436850" }} >Iniciar sesión</Button>
-                        <Button variant="contained" sx={{ backgroundColor: "#436850" }} >Registrarse</Button>
+                        <Button onClick={handleLoginNavigate} variant="contained" sx={{ backgroundColor: "#436850" }} >Iniciar sesión</Button>
+                        <Button onClick={handleSignupNavigate} variant="contained" sx={{ backgroundColor: "#436850" }} >Registrarse</Button>
                     </CardActions>
                 </CardActionArea>
             </Card>
