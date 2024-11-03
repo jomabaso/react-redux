@@ -25,7 +25,7 @@ const Features = () => {
                     <CircularProgress size="8rem" variant="determinate" value={progress} />
                 </Stack>
                 <Stack>
-                    <LinearProgress variant="buffer" value={progress} />
+                    {/* <LinearProgress variant="buffer" value={progress} /> */}
                 </Stack>
 
             </Stack>
