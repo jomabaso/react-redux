@@ -7,7 +7,7 @@ import CardActionArea from '@mui/material/CardActionArea';
 import CardActions from '@mui/material/CardActions';
 import Button from '@mui/material/Button';
 
-import logo from '../../../logos/logo_s.svg';
+import logo from '../../../../logos/logo_s.svg';
 import login from "../../login_component/LoginPage";
 import signup from "../../signup_components/Signup";
 import { useNavigate } from "react-router-dom";

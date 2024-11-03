@@ -1,27 +1,22 @@
 import React from "react";
-import logo from '../../../logos/logo_s.svg';
+import logo from '../../../../logos/logo_s.svg';
 import { AppBar, Toolbar, Typography , Button, Box} from '@mui/material';
 import '../header_component/Header.css';
 import { useNavigate } from "react-router-dom";
-import LandingPage from "../../../pages/LandingPage";
-
-// import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-// import LoginPage from '../../login_component';
 
 const Header = () => {
     const navigate = useNavigate();
 
-    const handlelandingNavigate = () =>{
+    const HandleLandingNavigate = () =>{
         navigate('/')
     };
 
-    const handleloginNavigate = () =>{
+    const HandleLoginNavigate = () =>{
         navigate('/login')
     };
-    const handleregisterNavigate = () =>{
+    const HandleRegisterNavigate = () =>{
         navigate('/signup')
     };
-
 
     return (
         <AppBar position="static" elevation={1}>
@@ -30,13 +25,13 @@ const Header = () => {
                     <img src={logo} className="App-logo" alt="logo" />
                 </Typography>
                 <Box sx={{ display: 'flex', gap: 2 }}>
-                    <Button onClick={handlelandingNavigate} color="inherit">Inicio</Button>
-                    <Button color="inherit">Servicios</Button>
+                    <Button onClick={HandleLandingNavigate} color="inherit">Inicio</Button>
+                    <Button color="inherit">Servicio</Button>
                     <Button color="inherit">Contacto</Button>
                 </Box>
                 <Box sx={{ display: 'flex', gap: 1, ml: 3 }}>
-                    <Button onClick={handleloginNavigate} color="inherit">Iniciar Sesión</Button>
-                    <Button onClick={handleregisterNavigate} variant="outlined" color="inherit">
+                    <Button onClick={HandleLoginNavigate} color="inherit">Iniciar Sesión</Button>
+                    <Button onClick={HandleRegisterNavigate} variant="outlined" color="inherit">
                         Registrarse
                     </Button>
                 </Box>
