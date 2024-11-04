@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import "./Loginpage.css";
-import { CssBaseline, Box, Container, Card, CardActions, CardContent, CardActionArea, TextField } from '@mui/material';
+import { CssBaseline, Box, Container, Card, CardActions, CardContent, CardActionArea, TextField, Stack } from '@mui/material';
 import { Button, Grid2, Typography } from '@mui/material';
 // import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
@@ -39,30 +39,34 @@ const LoginPage = () => {
     }, [authState.isAuthenticated, navigate])
 
     return (
-            <div className='mainLogin'>
-                <Card elevation={15}>
-                    <CardActionArea>
-                        <div className='frameLogin'>
-                            <div className='inputLogin'>
-                                <Typography variant='button'>Usuario</Typography>
-                                <TextField id='standard-basic' label='UserName' variant='standard' value={username} onChange={(e) => setUsername(e.target.value)} ></TextField>
+        <div data-aos="fade-up" data-aos-delay="500" data-aos-duration="2000" className='mainLogin'>
 
-                            </div>
-                            <div className='inputLogin'>
-                                <Typography variant='button'>Password</Typography>
-                                <TextField type='password' id='standard-basic' label='Password' variant='standard' value={password} onChange={(e) => setPassword(e.target.value)}></TextField>
-                            </div>
-                            <div className='inputLogin' >
-                                <Button variant="contained" onClick={handleLogin}>Ingesar</Button>
-                                <Button variant="contained">Olvidé mi contraseña</Button>
-                            </div>
-                            {error && <p style={{ color: 'red' }}>{error}</p>} {/* Muestra el error si existe */}
+            <CardActionArea className='custom-card-action-area' >
+                <Stack className='mainStack'>
+                    <Stack className='childStack' direction={'row'} spacing={10}>
+                        <h2 className='custom-textfield'>Usuario</h2>
+                        <TextField className='custom-textfield'  label='Nombre De Usuario' variant='standard' value={username} onChange={(e) => setUsername(e.target.value)} ></TextField>
+                    </Stack>
+                    <Stack className='childStack' direction={'row'} spacing={8}>
+                        <h2 className='custom-textfield'>Password</h2>
+                        <TextField className='custom-textfield' type='password' label='Contraseña' variant='standard' value={password} onChange={(e) => setPassword(e.target.value)}></TextField>
+                    </Stack>
+                    <Stack className='childStack' direction={'row'} spacing={1}>
+                        <Button variant="contained" onClick={handleLogin}>Ingresar</Button>
+                        <Button variant="contained">Olvidé mi contraseña</Button>
+                    </Stack>
+                    <Stack>
+                        {error && <p style={{ color: 'red' }}>{error}</p>} {/* Muestra el error si existe */}
+                    </Stack>
 
-                        </div>
-                    </CardActionArea>
-                </Card>
-            </div>
-        
+
+                </Stack>
+
+
+            </CardActionArea>
+
+        </div>
+
     )
 };
 

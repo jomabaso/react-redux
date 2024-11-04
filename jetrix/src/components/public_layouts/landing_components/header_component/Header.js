@@ -1,5 +1,5 @@
 import React from "react";
-import logo from '../../../../logos/logo_s.svg';
+import logo from '../../../../logos/logo2.svg';
 import { AppBar, Toolbar, Typography , Button, Box} from '@mui/material';
 import '../header_component/Header.css';
 import { useNavigate } from "react-router-dom";
@@ -10,7 +10,7 @@ const Header = () => {
     const HandleLandingNavigate = () =>{
         navigate('/')
     };
-
+    // Para la navegación a otras paginas
     const HandleLoginNavigate = () =>{
         navigate('/login')
     };
@@ -20,7 +20,7 @@ const Header = () => {
 
     return (
         <AppBar position="static" elevation={1}>
-            <Toolbar sx={{backgroundColor:"#769FCD"}}>
+            <Toolbar className="custom-toolbar" sx={{backgroundColor:"#769FCD"}}>
                 <Typography variant="poster" component="div" sx={{ textAlign:'justify', flexGrow: 1 }}>
                     <img src={logo} className="App-logo" alt="logo" />
                 </Typography>
