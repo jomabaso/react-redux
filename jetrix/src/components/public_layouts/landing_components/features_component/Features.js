@@ -15,7 +15,7 @@ const Features = () => {
     // }, []);
 
     return (
-        <div className="backgroundFeature" data-aos="zoom-out"  data-aos-duration="1000">
+        <div className="backgroundFeature" >
 
             <div className="mainFeatures">
                 <div className="mainTitle">
