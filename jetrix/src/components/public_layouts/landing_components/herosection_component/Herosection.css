@@ -1,27 +1,48 @@
 .Body-general{
 
-    max-width: 90%;
-    max-height: 90%;
-    display: flex;
-    flex-direction: row;
-    margin: 2% 5%;
-    
+    min-width: 100vh;
+    min-height: 100vh;
+    background-color: #F8FFF7 ;
+}
+
+.body-wrap{
+  display: flex;
+  flex-direction: row;
+  padding: 10%;
 }
 
 .body-info{
-    margin: 0% 2%;
-    flex-grow: 1;
-    max-width: 50%;
+    padding: 5%;
+    max-width: 60%;
     text-align: justify;
+    
 }
 
 .body-items{
     flex-grow: 1;
 }
 
+.card-frame{
+  display: flex !important;
+  justify-content: center !important;
+  box-shadow:  5px 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-body{
+  padding: 5% !important;
+  width: 100%;
+  height: 100%;
+}
+
+.card-logo{
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center !important;
+}
+
 
 .App-logo-hero {
-    height: 40vmin;
+    height: 30vmin;
     pointer-events: none;
   }
   
