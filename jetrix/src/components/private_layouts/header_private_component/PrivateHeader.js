@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from '../../../logos/logo_s.svg';
+import logo from '../../../logos/logo2.svg';
 import './Header.css';
 
 import { AppBar, Toolbar, Typography, Button, Box, IconButton } from '@mui/material';
@@ -77,7 +77,7 @@ const Header = () => {
             <AppBar position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }} elevation={1}>
 
 
-                <Toolbar sx={{ backgroundColor: "#769FCD" }}>
+                <Toolbar className="custom-toolbar">
 
                     <Typography variant="poster" component="div" sx={{ textAlign: 'justify', flexGrow: 1 }}>
                         <img src={logo} className="App-logo" alt="logo" />

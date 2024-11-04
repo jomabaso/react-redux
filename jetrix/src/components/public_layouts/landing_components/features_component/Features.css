@@ -1,6 +1,17 @@
-.mainFeatures{
+.mainFeatures {
     display: flex;
     justify-content: center;
-    min-height: 50vh;
-    background-color: beige;
+    min-height: 94vh;
+    backdrop-filter: blur(3px);
+}
+
+.backgroundFeature {
+    background-image: url("../../../../images/fw3.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.mainTitle{
+    justify-content: center;
+    text-align: center;
 }

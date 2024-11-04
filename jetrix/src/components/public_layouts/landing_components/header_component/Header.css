@@ -1,7 +1,6 @@
 
-.Custom-Appbar{
-    background-color: red;
-    color: aqua;
+.custom-toolbar{
+    background-color: #1A535C !important;
 }
 .App-logo {
     height: 5vmin;
