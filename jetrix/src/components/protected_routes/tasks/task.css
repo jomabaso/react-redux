@@ -1,0 +1,49 @@
+.mainTask{
+    margin-left: 240px;
+    margin-top: 65px;
+    background-color: rgb(255, 255, 255);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 100px;
+}
+
+.custom-task{
+    width: 100% !important;
+    height: 5% !important;
+    text-align: start !important;
+    background-color: rgb(212, 212, 212) !important;
+    transition: transform 0.5s ease !important;
+    transition: background-color 0.5s linear !important;
+}
+
+.custom-task:hover{
+    background-color: rgb(211, 227, 255) !important;
+    transform:  scale(1.1) !important;
+}
+
+.custom-create-task{
+
+    width: 300px !important;
+    height: 50px !important;
+    background-color: rgb(214, 214, 214) !important;
+    transition: transform 0.5s ease !important;
+    transition: background-color 0.5s linear !important;
+}
+
+.custom-create-task:hover{
+    background-color: rgb(211, 227, 255) !important;
+    transform:  scale(1.1) !important;
+}
+
+.custom-stack-grid-up{
+    background-color: rgb(255, 255, 255) !important;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5%;
+}
+.custom-stack-grid-main{
+    background-color: rgb(255, 255, 255) !important;
+    width: 100% !important;
+    display: flex;
+}
