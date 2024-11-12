@@ -5,7 +5,7 @@ import { Button, Grid2, Typography } from '@mui/material';
 // import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { login } from '../../../features/authSlice';
+import { functionLogin as login, functionLogout as logout } from '../../../features/authSlice';
 import { useNavigate } from 'react-router-dom';
 
 
@@ -16,16 +16,17 @@ const LoginPage = () => {
     const [password, setPassword] = useState('');
     const dispatch = useDispatch();
     const error = useSelector((state) => state.auth.error);
-    const authState = useSelector((state) => state.auth)
+    const authState = useSelector((state) => state.auth);
+    const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
     const navigate = useNavigate();
 
     const handleLogin = (e) => {
         e.preventDefault();
 
         if (username && password) {
-            const userData = { username, password };
-            dispatch(login(userData));
-
+            // const userData = { username, password };
+            // dispatch(login(userData));
+            dispatch(login({ username, password }));
         } else {
             alert("ingrese informacion correcta");
         }

@@ -5,7 +5,7 @@ import './Header.css';
 import { AppBar, Toolbar, Typography, Button, Box, IconButton } from '@mui/material';
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from 'react-redux';
-import { logout } from '../../../features/authSlice';
+import { functionLogin as logout } from '../../../features/authSlice';
 
 import Drawer from '@mui/material/Drawer';
 import MuiAppBar from '@mui/material/AppBar';
@@ -36,7 +36,7 @@ const drawerWidth = 240;
 const Header = () => {
     const theme = useTheme();
     const navigate = useNavigate();
-    const authState = useSelector((state) => state.auth.isAuthenticated)
+    const authState = useSelector((state) => state.auth.isAuthenticated);
     const dispatch = useDispatch();
 
 
