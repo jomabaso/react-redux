@@ -13,6 +13,9 @@ import Signup from "./components/public_layouts/signup_components/Signup.js";
 import PublicLayout from './components/public_layouts/PublicLayout.js';
 import PrivateLayout from './components/private_layouts/PrivateLayout.js'
 
+import './services/authService.js'
+// import PrivateRoute from './components/PrivateRoute'
+
 
 const App = () => {
   return (
