@@ -1,10 +1,11 @@
 import { refresh } from 'aos';
 import axios from 'axios';
+import URL from '../urlStatic'
 
 
-const URL = 'https://jetrix-api-production.up.railway.app/api'
-const TEST_URL =  'http://localhost:8000/api'
-const API_URL = TEST_URL
+// const URL_PRODUCTION = 'https://jetrix-api-production.up.railway.app/api'
+// const TEST_URL =  'http://localhost:8000/api'
+const API_URL = URL
 
 
 const axiosInstance = axios.create({
