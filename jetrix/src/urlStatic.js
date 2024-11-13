@@ -5,7 +5,7 @@ const TEST_URL =  'http://localhost:8000/api'
 
 
 const API_URL= () =>{
-    return(URL_PRODUCTION)
+    return(TEST_URL)
 }
 
 

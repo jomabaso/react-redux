@@ -89,4 +89,8 @@ redux-logger/
 .docusaurus/
 out/
 .cache-loader/
+<<<<<<< HEAD
 jetrix/src/urlStatic.js
+=======
+.urlStatic.js
+>>>>>>> dev
