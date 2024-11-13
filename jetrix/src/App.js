@@ -22,7 +22,7 @@ const App = () => {
     <Router>
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route path="/login" element={<PublicLayout> <LoginPage /> </PublicLayout>} />
+        <Route path="/login" element={<PublicLayout> <LoginPage />  </PublicLayout>} />
         <Route path="/signup" element={<PublicLayout><Signup /></PublicLayout>} />
         <Route path='/dashboard' element={<PrivateLayout> <Dashboard /> </PrivateLayout>} />
         <Route path='/tasks' element={<PrivateLayout> <Tasks /> </PrivateLayout>} />

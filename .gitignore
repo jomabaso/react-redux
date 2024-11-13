@@ -91,3 +91,6 @@ out/
 .cache-loader/
 jetrix/src/urlStatic.js
 .urlStatic.js
+.env
+.env.dev
+.env.prod

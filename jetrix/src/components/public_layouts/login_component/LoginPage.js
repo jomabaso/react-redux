@@ -12,6 +12,7 @@ import { useNavigate } from 'react-router-dom';
 
 const LoginPage = () => {
 
+    
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const dispatch = useDispatch();
@@ -46,7 +47,7 @@ const LoginPage = () => {
                 <Stack className='mainStack'>
                     <Stack className='childStack' direction={'row'} spacing={10}>
                         <h2 className='custom-textfield'>Usuario</h2>
-                        <TextField className='custom-textfield'  label='Nombre De Usuario' variant='standard' value={username} onChange={(e) => setUsername(e.target.value)} ></TextField>
+                        <TextField className='custom-textfield' label='Nombre De Usuario' variant='standard' value={username} onChange={(e) => setUsername(e.target.value)} ></TextField>
                     </Stack>
                     <Stack className='childStack' direction={'row'} spacing={8}>
                         <h2 className='custom-textfield'>Password</h2>

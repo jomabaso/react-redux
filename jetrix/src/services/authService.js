@@ -5,7 +5,7 @@ import URL from '../urlStatic'
 
 // const URL_PRODUCTION = 'https://jetrix-api-production.up.railway.app/api'
 // const TEST_URL =  'http://localhost:8000/api'
-const API_URL = URL
+const API_URL = process.env.REACT_APP_API_URL
 
 
 const axiosInstance = axios.create({
