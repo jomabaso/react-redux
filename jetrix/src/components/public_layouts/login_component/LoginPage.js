@@ -29,7 +29,7 @@ const LoginPage = () => {
             // dispatch(login(userData));
             dispatch(login({ username, password }));
         } else {
-            alert("ingrese informacion correcta");
+            alert("ingrese información correcta");
         }
         console.log("estado del store", { authState })
     };

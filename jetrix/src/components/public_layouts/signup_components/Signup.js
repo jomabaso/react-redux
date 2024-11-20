@@ -13,9 +13,26 @@ const Signup = () => {
     const [error, setError] = useState('');
     const navigate = useNavigate();
 
+    const [errors, setErrors] = useState({
+        nombre: false,
+        correo: false,
+        username: false,
+        password: false,
+      });
+
     const handleRegister= async() => {
+        if (nombre === ''){
+            {errors.nombre=true}
+        }if(username===''){
+            {errors.username=true}
+        }if(correo === ''){
+            {errors.correo=true}
+        }if(password ===''){
+            {errors.password=true}
+        }
         try{
             const userData = {
+                nombre,
                 username,
                 password,
                 email: correo
@@ -37,28 +54,27 @@ const Signup = () => {
                 <div className="frameSignup" >
                     <CardActionArea sx={{ display: "flex" }}>
 
-                        <Stack direction="column" >
-                            <Stack direction="row">
-                                <Typography variant='button'>Nombre</Typography>
-                                <TextField label='Nombre' variant='standard' value={nombre} onChange={(e)=> setNombre(e.target.value)} ></TextField>
+                        <Stack direction="column" className="mainStack">
+                            <Stack direction="row" className="childStack">
+                                <Typography variant='subtitle1'>Nombre</Typography>
+                                <TextField label='Nombre' variant='outlined' value={nombre} onChange={(e)=> setNombre(e.target.value)} error={errors.nombre && nombre === ''}></TextField>
                             </Stack>
-                            <Stack direction="row">
-                                <Typography variant='button'>Correo</Typography>
-                                <TextField label='Correo' variant='standard' value={correo} onChange={(e)=> setCorreo(e.target.value)} ></TextField>
+                            <Stack direction="row" className="childStack">
+                                <Typography variant='subtitle1'>Correo</Typography>
+                                <TextField label='Correo' type="email" variant='outlined'  value={correo} onChange={(e)=> setCorreo(e.target.value)} error={errors.correo && correo === ''} ></TextField>
                             </Stack>
-                            <Stack direction="row">
-                                <Typography variant='button'>Nombre de usuario</Typography>
-                                <TextField label='Nombre de usuario' variant='standard' value={username} onChange={(e)=> setUsername(e.target.value)} ></TextField>
+                            <Stack direction="row" className="childStack">
+                                <Typography variant='subtitle1'>Nombre de usuario</Typography>
+                                <TextField label='Nombre de usuario' variant='outlined' value={username} onChange={(e)=> setUsername(e.target.value)} error={errors.username && username === ''}></TextField>
                             </Stack>
-                            <Stack direction="row">
-                                <Typography variant='button'>Contraseña</Typography>
-                                <TextField label='Contraseña' variant='standard' value={password} onChange={(e)=> setPassword(e.target.value)} ></TextField>
+                            <Stack direction="row" className="childStack">
+                                <Typography variant='subtitle1'>Contraseña</Typography>
+                                <TextField label='Contraseña' type='password' variant='outlined' value={password} onChange={(e)=> setPassword(e.target.value)} error={errors.password && password === ''} ></TextField>
                             </Stack>
-                            <Stack direction="row">
-                                <Button variant="contained" onClick={handleRegister}>Registrar</Button>
-                                <Button variant="contained" onClick={()=> navigate(-1)}>Cancelar</Button>
+                            <Stack direction="row" className="childStack">
+                                <Button className="childStackButton" variant="contained" onClick={handleRegister}>Registrar</Button>
+                                <Button className="childStackButton" variant="contained" onClick={()=> navigate(-1)}>Cancelar</Button>
                             </Stack>
-
                         </Stack>
 
                     </CardActionArea>

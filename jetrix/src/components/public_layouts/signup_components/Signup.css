@@ -6,11 +6,29 @@
 }
 
 .frameSignup{
-    display: flex;
-    justify-content: center;
-    min-height: 50vh;
-    min-width: 50vh;
-    height: 50%;
-    width: 50%;
+    display: flex !important;
+    justify-content: center !important;
+    min-height: 50vh !important;
+    min-width: 50vh !important;
+    height: 50% !important;
+    width: 50% !important;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
 }
+
+.mainStack{
+    min-width: 40vh !important;
+    justify-content: space-between !important;
+}
+
+.childStack{
+    justify-content: space-between !important;
+    align-items: center !important;
+}
+
+.childStackButton{
+    justify-content: center !important;
+    display: block !important;
+    width: 50% !important;
+    margin-top: 5% !important;
+}
+
